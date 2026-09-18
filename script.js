@@ -35,21 +35,20 @@ const serviceVideoByPage = {
   'ai-ready-processing.html': `${githubAssetBase}Services_VidBOX/AI_Ready_VidBOX.mp4`
 };
 
-const serviceVideoSource = serviceVideoByPage[window.location.pathname.split('/').pop()];
+const currentPage = window.location.pathname.split('/').pop().split('?')[0];
+const serviceVideoSource = serviceVideoByPage[currentPage];
 if (serviceVideoSource) {
   document.querySelectorAll('.service-video-box').forEach((videoBox) => {
     const video = document.createElement('video');
-    const source = document.createElement('source');
 
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
     video.preload = 'metadata';
-    source.src = serviceVideoSource;
-    source.type = 'video/mp4';
-    video.appendChild(source);
+    video.src = serviceVideoSource;
     videoBox.replaceChildren(video);
+    video.load();
   });
 }
 
@@ -60,7 +59,7 @@ const securityVideoByCard = {
   '.security-media-recovery': `${githubAssetBase}Data%20Security/Continuity%20Planning.mp4`
 };
 
-if (window.location.pathname.split('/').pop() === 'data-security.html') {
+if (currentPage === 'data-security.html') {
   Object.entries(securityVideoByCard).forEach(([selector, videoSource]) => {
     const videoBox = document.querySelector(selector);
     if (!videoBox) {
@@ -68,17 +67,15 @@ if (window.location.pathname.split('/').pop() === 'data-security.html') {
     }
 
     const video = document.createElement('video');
-    const source = document.createElement('source');
 
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
     video.preload = 'metadata';
-    source.src = videoSource;
-    source.type = 'video/mp4';
-    video.appendChild(source);
+    video.src = videoSource;
     videoBox.replaceChildren(video);
+    video.load();
   });
 }
 
