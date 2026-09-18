@@ -1,7 +1,7 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const primaryNavigation = document.querySelector('.primary-navigation');
 const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-const githubAssetBase = 'https://raw.githubusercontent.com/ahmedarbaz272-maker/A-K_Consultancy/main/Assets/';
+const githubAssetBase = 'Assets/';
 
 const githubAssetSources = {
   '.brand-logo source': `${githubAssetBase}Brand_Logo/Green_arrow_logo_animation_202608241919.mp4`,
