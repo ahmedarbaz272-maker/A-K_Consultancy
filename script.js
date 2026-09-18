@@ -1,12 +1,38 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const primaryNavigation = document.querySelector('.primary-navigation');
 const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+const githubAssetBase = 'https://raw.githubusercontent.com/ahmedarbaz272-maker/A-K_Consultancy/main/Assets/';
+
+const githubAssetSources = {
+  '.brand-logo source': `${githubAssetBase}Brand_Logo/Green_arrow_logo_animation_202608241919.mp4`,
+  '.footer-logo source': `${githubAssetBase}Brand_Logo/Green_arrow_logo_animation_202608241919.mp4`,
+  '.social-link[aria-label="Facebook"] img': `${githubAssetBase}Icons/icons8-facebook.gif`,
+  '.social-link[aria-label="LinkedIn"] img': `${githubAssetBase}Icons/icons8-linkedin-48.gif`,
+  '.services-hero-video source': `${githubAssetBase}HeroSection/Service%20Bars.mp4`,
+  '.hero-video source': `${githubAssetBase}HeroSection/HomeHero.mp4`,
+  '.contact-video-background source': `${githubAssetBase}Contact%20Page/Flying_through_geometric_tunnel_1080p_20260914140440.mp4`,
+  'input[value="request-a-meeting"] + .contact-intent-logo': `${githubAssetBase}Contact%20Page/request-a-meeting-organic-alt-1.png`,
+  'input[value="careers"] + .contact-intent-logo': `${githubAssetBase}Contact%20Page/careers-icon-new.png`,
+  'input[value="general-inquiries"] + .contact-intent-logo': `${githubAssetBase}Contact%20Page/general-inquiries-icon-only.png`
+};
+
+Object.entries(githubAssetSources).forEach(([selector, source]) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    if (element.tagName === 'SOURCE') {
+      element.src = source;
+      element.parentElement.load();
+    } else {
+      element.src = source;
+    }
+  }
+});
 
 const serviceVideoByPage = {
-  'document-scanning.html': 'DocScan_VidBOX.mp4',
-  'bpo-workflows.html': 'BPO_WorkFlow_VidBOX.mp4',
-  'legacy-data-transformation.html': 'Leg_Data_VidBOX.mp4',
-  'ai-ready-processing.html': 'AI_Ready_VidBOX.mp4'
+  'document-scanning.html': `${githubAssetBase}Services_VidBOX/DocScan_VidBOX.mp4`,
+  'bpo-workflows.html': `${githubAssetBase}Services_VidBOX/BPO_WorkFlow_VidBOX.mp4`,
+  'legacy-data-transformation.html': `${githubAssetBase}Services_VidBOX/Leg_Data_VidBOX.mp4`,
+  'ai-ready-processing.html': `${githubAssetBase}Services_VidBOX/AI_Ready_VidBOX.mp4`
 };
 
 const serviceVideoSource = serviceVideoByPage[window.location.pathname.split('/').pop()];
@@ -28,10 +54,10 @@ if (serviceVideoSource) {
 }
 
 const securityVideoByCard = {
-  '.security-media-facility': 'Physical & Operational Controls.mp4',
-  '.security-media-data': 'Data Protection Controls.mp4',
-  '.security-media-people': 'Employee Confidentiality.mp4',
-  '.security-media-recovery': 'Continuity Planning.mp4'
+  '.security-media-facility': `${githubAssetBase}Data%20Security/Physical%20%26%20Operational%20Controls.mp4`,
+  '.security-media-data': `${githubAssetBase}Data%20Security/Data%20Protection%20Controls.mp4`,
+  '.security-media-people': `${githubAssetBase}Data%20Security/Employee%20Confidentiality.mp4`,
+  '.security-media-recovery': `${githubAssetBase}Data%20Security/Continuity%20Planning.mp4`
 };
 
 if (window.location.pathname.split('/').pop() === 'data-security.html') {
