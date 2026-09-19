@@ -1971,14 +1971,14 @@ body:has(#legacy-data-transformation) .case-studies-button {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.5);
+  transform: scale(1.25);
   transform-origin: center;
 }
 
 body:has(#document-scanning) .service-video-box {
   align-self: start;
-  height: 855px;
-  min-height: 780px;
+  height: 585px;
+  min-height: 510px;
   margin-top: 40px;
 }
 
@@ -2146,15 +2146,15 @@ body:has(#ai-ready-processing) .service-follow-up-button:focus-visible {
 
 body:has(#legacy-data-transformation) .service-video-box {
   align-self: start;
-  height: 870px;
-  min-height: 780px;
+  height: 550px;
+  min-height: 460px;
   margin-top: 40px;
 }
 
 body:has(#ai-ready-processing) .service-video-box {
   align-self: start;
-  height: 1005px;
-  min-height: 780px;
+  height: 715px;
+  min-height: 625px;
   margin-top: 40px;
 }
 
@@ -2428,8 +2428,8 @@ body:has(#bpo-workflows) .sqs-block-content:first-of-type h3 {
 
 body:has(#bpo-workflows) .service-video-box {
   align-self: start;
-  height: 870px;
-  min-height: 780px;
+  height: 630px;
+  min-height: 540px;
   margin-top: 40px;
 }
 
@@ -2439,8 +2439,20 @@ body:has(#bpo-workflows) .service-video-box {
 }
 
 body:has(#bpo-workflows) .case-studies-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid #f4b942;
+  border-radius: 4px;
   background: #f4b942;
   color: #17233b;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 body:has(#bpo-workflows) .case-studies-button:hover,
