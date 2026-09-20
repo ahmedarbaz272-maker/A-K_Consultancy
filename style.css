@@ -640,6 +640,7 @@ body {
 
 .header-bottomline {
   display: flex;
+  grid-column: 1 / -1;
   justify-content: space-between;
   gap: 20px;
   width: calc(100vw - 160px);
