@@ -4069,3 +4069,87 @@ svg {
     padding: 56px 20px 64px;
   }
 }
+
+@media (max-width: 560px) {
+  .services-page {
+    padding-bottom: 40px;
+  }
+
+  .service-single {
+    padding: 48px 16px 20px;
+  }
+
+  .service-feature {
+    gap: 28px;
+    padding-bottom: 28px;
+  }
+
+  body:has(.service-feature) .service-item h2 {
+    top: 0;
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  body:has(.service-feature) .service-title-subtitle {
+    margin: 0 0 28px !important;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 1.12;
+  }
+
+  .sqs-block-content {
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  body:has(.service-feature) .sqs-block-content h3 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  body:has(#legacy-data-transformation) .sqs-block-content h3,
+  body:has(#ai-ready-processing) .sqs-block-content h3 {
+    margin-top: 28px;
+  }
+
+  .data-rte-list li {
+    min-height: 0;
+    padding: 10px 10px 10px 38px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .data-rte-list li::before {
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+
+  .service-video-box,
+  body:has(#document-scanning) .service-video-box,
+  body:has(#legacy-data-transformation) .service-video-box,
+  body:has(#ai-ready-processing) .service-video-box {
+    height: 360px;
+    min-height: 360px;
+    margin-top: 24px;
+  }
+
+  body:has(#bpo-workflows) .service-video-box {
+    height: 360px;
+    min-height: 360px;
+  }
+
+  body:has(#legacy-data-transformation) .service-follow-up-copy h4,
+  body:has(#ai-ready-processing) .service-follow-up-copy h4 {
+    font-size: 20px;
+  }
+
+  body:has(#legacy-data-transformation) .service-follow-up-copy p,
+  body:has(#ai-ready-processing) .service-follow-up-copy p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
