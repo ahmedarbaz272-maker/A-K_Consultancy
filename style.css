@@ -3213,6 +3213,39 @@ svg {
   }
 }
 
+  /* Keep the primary hero band consistent across every page. */
+  .hero,
+  .about-hero,
+  .services-hero,
+  .sectors-hero,
+  .data-security-hero,
+  .contact-intro {
+    height: 700px;
+    min-height: 700px;
+  }
+
+  .about-hero {
+    height: 700px !important;
+    min-height: 700px !important;
+  }
+
+  @media (max-width: 560px) {
+    .hero,
+    .about-hero,
+    .services-hero,
+    .sectors-hero,
+    .data-security-hero,
+    .contact-intro {
+      height: 620px;
+      min-height: 620px;
+    }
+
+    .about-hero {
+      height: 620px !important;
+      min-height: 620px !important;
+    }
+  }
+
 /* Contact page */
 .contact-page {
   background: #f4f6f8;
