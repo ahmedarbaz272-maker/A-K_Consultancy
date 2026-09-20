@@ -36,6 +36,21 @@ const serviceVideoByPage = {
 };
 
 const currentPage = window.location.pathname.split('/').pop().split('?')[0];
+
+const encodingFixes = [
+  [String.fromCharCode(0xe2, 0x20ac, 0x201d), '-'],
+  [String.fromCharCode(0xe2, 0x20ac, 0x2122), "'"],
+  [String.fromCharCode(0xe2, 0x20ac, 0x153), '"'],
+  [String.fromCharCode(0xe2, 0x20ac, 0x160), '"']
+];
+const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+let textNode;
+while ((textNode = textWalker.nextNode())) {
+  encodingFixes.forEach(([corruptText, replacement]) => {
+    textNode.nodeValue = textNode.nodeValue.replaceAll(corruptText, replacement);
+  });
+}
+
 const serviceVideoSource = serviceVideoByPage[currentPage];
 if (serviceVideoSource) {
   document.querySelectorAll('.service-video-box').forEach((videoBox) => {
