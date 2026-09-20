@@ -4173,6 +4173,45 @@ svg {
 }
 
 @media (max-width: 560px) {
+  body:has(#legacy-data-transformation) .service-feature .service-item,
+  body:has(#ai-ready-processing) .service-feature .service-item,
+  body:has(#legacy-data-transformation) .service-follow-up-right,
+  body:has(#ai-ready-processing) .service-follow-up-right,
+  body:has(#legacy-data-transformation) .service-follow-up-copy,
+  body:has(#ai-ready-processing) .service-follow-up-copy {
+    display: contents;
+  }
+
+  body:has(#legacy-data-transformation) .service-feature .service-item > h2,
+  body:has(#legacy-data-transformation) .service-feature .service-item > .sqs-block-content,
+  body:has(#ai-ready-processing) .service-feature .service-item > h2,
+  body:has(#ai-ready-processing) .service-feature .service-item > .sqs-block-content {
+    order: 1;
+  }
+
+  body:has(#legacy-data-transformation) .service-feature .service-video-box,
+  body:has(#ai-ready-processing) .service-feature .service-video-box {
+    order: 2;
+  }
+
+  body:has(#legacy-data-transformation) .service-follow-up-copy h4,
+  body:has(#legacy-data-transformation) .service-follow-up-copy p,
+  body:has(#ai-ready-processing) .service-follow-up-copy h4,
+  body:has(#ai-ready-processing) .service-follow-up-copy p {
+    order: 3;
+  }
+
+  body:has(#legacy-data-transformation) .service-follow-up-badges,
+  body:has(#ai-ready-processing) .service-follow-up-badges {
+    order: 4;
+  }
+
+  body:has(#legacy-data-transformation) .service-follow-up-button,
+  body:has(#ai-ready-processing) .service-follow-up-button {
+    order: 5;
+    margin-top: 0;
+  }
+
   .services-page {
     padding-bottom: 40px;
   }
