@@ -649,7 +649,12 @@ body {
 }
 
 .header-bottomline a {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
   color: inherit;
+  cursor: pointer;
+  pointer-events: auto;
   text-decoration: none;
 }
 
