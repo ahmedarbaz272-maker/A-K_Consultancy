@@ -3158,7 +3158,7 @@ body:has(#bpo-workflows) .service-feature {
   }
 
   body:has(#bpo-workflows) .bpo-mobile-coverage-badges {
-    display: grid;
+    display: none !important;
     order: 4;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
