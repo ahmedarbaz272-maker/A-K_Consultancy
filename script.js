@@ -57,11 +57,6 @@ if (currentPage === 'bpo-workflows.html') {
   const bpoCoverage = document.querySelector('#bpo-workflows .service-more-copy');
 
   if (bpoVideo && bpoCoverage) {
-    const coverageBadges = document.createElement('div');
-    coverageBadges.className = 'bpo-mobile-coverage-badges';
-    coverageBadges.setAttribute('aria-label', 'BPO workflow coverage');
-    coverageBadges.innerHTML = '<span>Revenue Cycle</span><span>Claims &amp; Denials</span><span>Payment Posting</span><span>Prior Authorization</span>';
-    bpoVideo.after(coverageBadges);
     bpoCoverage.classList.add('bpo-workflow-coverage');
   }
 }

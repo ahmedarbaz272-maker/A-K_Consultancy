@@ -3184,18 +3184,6 @@ body:has(#bpo-workflows) .service-feature {
     margin: 0;
   }
 
-  body:has(#bpo-workflows) .bpo-workflow-coverage h4 {
-    margin-bottom: 10px;
-    font-size: 0;
-  }
-
-  body:has(#bpo-workflows) .bpo-workflow-coverage h4::before {
-    content: 'Workflow Coverage';
-    display: block;
-    font-size: 22px;
-    line-height: 1.15;
-  }
-
   body:has(#bpo-workflows) .bpo-workflow-coverage p {
     font-size: 14px;
     line-height: 1.5;
