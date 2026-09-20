@@ -3730,6 +3730,18 @@ svg {
   background: #000000;
 }
 
+.privacy-page .content-panel {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+@media (max-width: 600px) {
+  .privacy-page .content-panel {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
 .contact-assurance-icon {
   position: relative;
   display: grid;
