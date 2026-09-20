@@ -63,6 +63,11 @@ if (currentPage === 'bpo-workflows.html') {
     coverageBadges.innerHTML = '<span>Revenue Cycle</span><span>Claims &amp; Denials</span><span>Payment Posting</span><span>Prior Authorization</span>';
     bpoVideo.after(coverageBadges);
     bpoCoverage.classList.add('bpo-workflow-coverage');
+
+    const workflowCoverage = document.createElement('section');
+    workflowCoverage.className = 'bpo-mobile-workflow-section';
+    workflowCoverage.innerHTML = '<h4>Workflow Coverage</h4><p>From intake to payment</p><p>One coordinated process for every claim.</p><a class="case-studies-button" href="get-in-touch.html">Explore Your Options</a>';
+    bpoCoverage.after(workflowCoverage);
   }
 }
 

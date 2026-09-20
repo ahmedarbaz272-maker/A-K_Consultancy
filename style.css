@@ -3052,6 +3052,10 @@ body:has(#bpo-workflows) .service-trust-badges .certification-dot {
   display: none;
 }
 
+.bpo-mobile-workflow-section {
+  display: none;
+}
+
 body:has(#bpo-workflows) .service-cta-banner .service-trust-badges {
   grid-column: 1 / -1;
   margin-top: 0;
@@ -3141,7 +3145,7 @@ body:has(#bpo-workflows) .service-feature {
 
   body:has(#bpo-workflows) .bpo-mobile-coverage-badges {
     display: grid;
-    order: 3;
+    order: 4;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
     width: 100%;
@@ -3161,7 +3165,7 @@ body:has(#bpo-workflows) .service-feature {
   }
 
   body:has(#bpo-workflows) .service-bpo-right .bpo-workflow-coverage {
-    order: 4;
+    order: 3;
     width: 100%;
     margin: 0;
   }
@@ -3183,11 +3187,56 @@ body:has(#bpo-workflows) .service-feature {
     line-height: 1.5;
   }
 
-  body:has(#bpo-workflows) .service-feature > .service-cta-banner {
+  body:has(#bpo-workflows) .bpo-mobile-workflow-section {
+    display: block;
     order: 5;
     width: 100%;
+    padding: 22px 0 0;
+    border-top: 1px solid #c8d6e6;
+  }
+
+  body:has(#bpo-workflows) .bpo-mobile-workflow-section h4 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    line-height: 1.15;
+  }
+
+  body:has(#bpo-workflows) .bpo-mobile-workflow-section p {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  body:has(#bpo-workflows) .bpo-mobile-workflow-section .case-studies-button {
+    margin-top: 14px;
+  }
+
+  body:has(#bpo-workflows) .service-feature > .service-cta-banner {
+    order: 6;
+    width: 100%;
     margin: 0;
-    padding: 36px 20px;
+    min-height: 0;
+    padding: 28px 20px;
+    display: block;
+    background-image: linear-gradient(135deg, #0c2b67, #1955a4);
+    box-shadow: none;
+    animation: none;
+  }
+
+  body:has(#bpo-workflows) .service-cta-banner::after {
+    display: none;
+  }
+
+  body:has(#bpo-workflows) .service-cta-banner .service-cta-question {
+    font-size: 22px;
+  }
+
+  body:has(#bpo-workflows) .service-cta-banner .service-cta-subheadline {
+    margin: 10px 0 18px;
+    font-size: 14px;
   }
 }
 
