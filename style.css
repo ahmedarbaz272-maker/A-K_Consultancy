@@ -3191,8 +3191,9 @@ body:has(#bpo-workflows) .service-feature {
 
   body:has(#bpo-workflows) .service-feature > .service-cta-banner {
     order: 6;
-    width: 100%;
-    margin: 0;
+    width: calc(100% + 32px);
+    margin-right: -16px;
+    margin-left: -16px;
     min-height: 0;
     padding: 28px 20px;
     display: block;
