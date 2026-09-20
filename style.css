@@ -3052,10 +3052,6 @@ body:has(#bpo-workflows) .service-trust-badges .certification-dot {
   display: none;
 }
 
-.bpo-mobile-workflow-section {
-  display: none;
-}
-
 body:has(#bpo-workflows) .service-cta-banner .service-trust-badges {
   grid-column: 1 / -1;
   margin-top: 0;
@@ -3132,6 +3128,24 @@ body:has(#bpo-workflows) .service-feature {
   }
 
   body:has(#bpo-workflows) .service-feature .service-item {
+    display: contents;
+  }
+
+  body:has(#bpo-workflows) .service-feature .service-item > h2,
+  body:has(#bpo-workflows) .service-feature .service-item > .sqs-block-content {
+    order: 1;
+  }
+
+  body:has(#bpo-workflows) .service-feature .bpo-column-note {
+    order: 5;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #c8d6e6;
+    border-bottom: 0;
+  }
+
+  body:has(#bpo-workflows) .service-feature .service-item {
     order: 1;
   }
 
@@ -3185,33 +3199,6 @@ body:has(#bpo-workflows) .service-feature {
   body:has(#bpo-workflows) .bpo-workflow-coverage p {
     font-size: 14px;
     line-height: 1.5;
-  }
-
-  body:has(#bpo-workflows) .bpo-mobile-workflow-section {
-    display: block;
-    order: 5;
-    width: 100%;
-    padding: 22px 0 0;
-    border-top: 1px solid #c8d6e6;
-  }
-
-  body:has(#bpo-workflows) .bpo-mobile-workflow-section h4 {
-    margin: 0 0 10px;
-    color: var(--navy);
-    font-family: 'Manrope', sans-serif;
-    font-size: 22px;
-    line-height: 1.15;
-  }
-
-  body:has(#bpo-workflows) .bpo-mobile-workflow-section p {
-    margin: 0 0 6px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  body:has(#bpo-workflows) .bpo-mobile-workflow-section .case-studies-button {
-    margin-top: 14px;
   }
 
   body:has(#bpo-workflows) .service-feature > .service-cta-banner {
