@@ -3177,6 +3177,38 @@ svg {
   padding-left: 80px;
 }
 
+@media (max-width: 1030px) {
+  .site-header .header-inner {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .site-footer .footer-inner {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .header-bottomline {
+    width: calc(100vw - 48px);
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header .header-inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .site-footer .footer-inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .header-bottomline {
+    width: calc(100vw - 32px);
+  }
+}
+
 /* Contact page */
 .contact-page {
   background: #f4f6f8;
