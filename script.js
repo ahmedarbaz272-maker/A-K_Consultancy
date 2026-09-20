@@ -52,6 +52,20 @@ if (serviceVideoSource) {
   });
 }
 
+if (currentPage === 'bpo-workflows.html') {
+  const bpoVideo = document.querySelector('#bpo-workflows .service-video-box');
+  const bpoCoverage = document.querySelector('#bpo-workflows .service-more-copy');
+
+  if (bpoVideo && bpoCoverage) {
+    const coverageBadges = document.createElement('div');
+    coverageBadges.className = 'bpo-mobile-coverage-badges';
+    coverageBadges.setAttribute('aria-label', 'BPO workflow coverage');
+    coverageBadges.innerHTML = '<span>Revenue Cycle</span><span>Claims &amp; Denials</span><span>Payment Posting</span><span>Prior Authorization</span>';
+    bpoVideo.after(coverageBadges);
+    bpoCoverage.classList.add('bpo-workflow-coverage');
+  }
+}
+
 const securityVideoByCard = {
   '.security-media-facility': `${githubAssetBase}Data%20Security/Physical%20%26%20Operational%20Controls.mp4`,
   '.security-media-data': `${githubAssetBase}Data%20Security/Data%20Protection%20Controls.mp4`,
