@@ -3331,8 +3331,7 @@ svg {
   .about-hero,
   .services-hero,
   .sectors-hero,
-  .data-security-hero,
-  .contact-intro {
+  .data-security-hero {
     height: 700px;
     min-height: 700px;
   }
@@ -3347,8 +3346,7 @@ svg {
     .about-hero,
     .services-hero,
     .sectors-hero,
-    .data-security-hero,
-    .contact-intro {
+    .data-security-hero {
       height: 620px;
       min-height: 620px;
     }
