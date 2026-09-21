@@ -126,7 +126,18 @@ if (aboutBackground) {
     bar.style.backgroundColor = isDarkBlock
       ? '#031d36'
       : barColors[(column + row * 2) % barColors.length];
-    bar.style.animationDelay = `-${((column / columns) * animationSeconds + row * 0.08).toFixed(2)}s`;
+    const isMiddleRow = row === Math.floor(rows / 2);
+    const isRightToLeft = row % 2 === 1;
+    const middleLeft = columns / 2 - 1;
+    const middleDistance = Math.min(
+      Math.abs(column - middleLeft),
+      Math.abs(column - (middleLeft + 1)),
+    );
+    const progress = isMiddleRow
+      ? middleDistance / (columns / 2)
+      : (isRightToLeft ? columns - 1 - column : column) / columns;
+
+    bar.style.animationDelay = `-${(progress * animationSeconds).toFixed(2)}s`;
     bar.style.opacity = isDarkBlock
       ? '0.82'
       : String(0.2 + (row / rows) * 0.68 + (column % 5) * 0.025);
